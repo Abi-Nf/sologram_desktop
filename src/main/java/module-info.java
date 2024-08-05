@@ -8,6 +8,9 @@ module music.sologram.app {
   requires org.kordamp.ikonli.material2;
   requires org.kordamp.ikonli.fontawesome5;
   requires org.kordamp.ikonli.materialdesign2;
+  requires com.fasterxml.jackson.core;
+  requires javafx.controls;
+  requires java.naming;
 
   exports music.sologram.app;
   opens music.sologram.app to javafx.fxml;
