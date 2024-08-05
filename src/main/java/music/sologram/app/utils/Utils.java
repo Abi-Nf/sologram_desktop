@@ -29,4 +29,23 @@ public class Utils {
   public static boolean pathExists(String path){
     return new File(path).exists();
   }
+
+  public static <T extends Number> String padValue(T value, int length, String padValue){
+    StringBuilder s = new StringBuilder(value.toString());
+    while (s.length() < length) s.insert(0, padValue);
+    return s.toString();
+  }
+
+  private static <T extends Number> String padTime(T value){
+    return padValue(value.longValue(), 2, "0");
+  }
+
+  public static String formatSeconds(Number rawSeconds){
+    var sec = Math.floor(rawSeconds.doubleValue() % 60);
+    var min = Math.floor(rawSeconds.doubleValue() / 60);
+    if (min < 60) return padTime(min) + ":" + padTime(sec);
+    var hour = Math.floor(min / 60);
+    min = min % 60;
+    return padTime(hour) + ":" + padTime(min) + ":" + padTime(sec);
+  }
 }
