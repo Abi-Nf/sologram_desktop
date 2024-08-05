@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'quicksand bold';
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+    src: url('fonts/Quicksand-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'quicksand light';
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    src: url('fonts/Quicksand-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'quicksand medium';
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url('fonts/Quicksand-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'quicksand regular';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url('fonts/Quicksand-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'quicksand semibold';
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url('fonts/Quicksand-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'tauri regular';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url("fonts/Tauri-Regular.ttf") format("truetype");
+}
