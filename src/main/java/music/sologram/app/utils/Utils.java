@@ -1,5 +1,7 @@
 package music.sologram.app.utils;
 
+import javafx.scene.image.Image;
+
 import java.io.File;
 import java.net.URL;
 
@@ -47,5 +49,9 @@ public class Utils {
     var hour = Math.floor(min / 60);
     min = min % 60;
     return padTime(hour) + ":" + padTime(min) + ":" + padTime(sec);
+  }
+
+  public static Image getAppLogo(){
+    return new Image(loadResource("/icons/logo.png").toExternalForm());
   }
 }
