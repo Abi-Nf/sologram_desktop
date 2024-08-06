@@ -23,7 +23,7 @@ public class Utils {
   }
 
   public static void asyncUiThread(Runnable runnable){
-    runLater(runnable);
+    executeInNewThread(() -> runLater(runnable));
   }
 
   public static boolean pathExists(String path){
