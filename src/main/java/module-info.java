@@ -9,9 +9,10 @@ module music.sologram.app {
   requires org.kordamp.ikonli.fontawesome5;
   requires org.kordamp.ikonli.materialdesign2;
   requires com.fasterxml.jackson.core;
-  requires javafx.controls;
   requires java.naming;
+  requires javafx.controls;
 
   exports music.sologram.app;
   opens music.sologram.app to javafx.fxml;
+  opens music.sologram.app.data.models to org.hibernate.orm.core;
 }
