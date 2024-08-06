@@ -1,0 +1,64 @@
+@import "../fonts.css";
+@import "../theme.css";
+
+.box {
+    -fx-spacing: 1em;
+    -fx-alignment: center;
+    -fx-background-color: THEME_BASE;
+}
+
+.image-container {
+    -fx-pref-width: 8em;
+    -fx-pref-height: 8em;
+}
+
+.image-container .ikonli-font-icon {
+    -fx-icon-size: 50;
+    -fx-icon-color: THEME_TEXT_MAIN;
+}
+
+.label {
+    -fx-font-size: 1.3em;
+    -fx-font-weight: 700;
+    -fx-font-family: "quicksand";
+    -fx-text-fill: THEME_TEXT_MAIN;
+}
+
+.image-view {
+    -fx-fit-width: 8em;
+    -fx-fit-height: 8em;
+}
+
+.button {
+    -fx-padding: 0.8em;
+    -fx-text-fill: THEME_TEXT;
+    -fx-graphic-text-gap: 0.4em;
+    -fx-background-radius: 0.6em;
+    -fx-background-color: THEME_SURFACE_0;
+}
+
+.button:hover {
+    -fx-background-color: THEME_SURFACE_2;
+}
+
+.button .ikonli-font-icon {
+    -fx-icon-size: 18;
+    -fx-icon-color: THEME_TEXT;
+}
+
+.box .progress-bar {
+    -fx-pref-width: 14em;
+}
+
+.box .progress-bar > .track {
+    -fx-pref-width: 10em;
+    -fx-border-radius: 0.6em;
+    -fx-background-radius: 0.6em;
+    -fx-background-color: THEME_SURFACE_0;
+}
+
+.box .progress-bar > .bar {
+    -fx-border-radius: 0.6em;
+    -fx-background-radius: 0.6em;
+    -fx-background-color: THEME_BLUE;
+}
