@@ -1,0 +1,62 @@
+.light-theme {
+    THEME_ROSE_WATER: #dc8a78;
+    THEME_FLAMINGO: #dd7878;
+    THEME_PINK: #ea76cb;
+    THEME_MAUVE: #8839ef;
+    THEME_RED: #d20f39;
+    THEME_MAROON: #e64553;
+    THEME_PEACH: #fe640b;
+    THEME_YELLOW: #df8e1d;
+    THEME_GREEN: #40a02b;
+    THEME_TEAL: #179299;
+    THEME_SKY: #209fb5;
+    THEME_SAPPHIRE: #209fb5;
+    THEME_BLUE: #1e66f5;
+    THEME_LAVENDER: #7287fd;
+    THEME_TEXT: black;
+    THEME_TEXT_MAIN: #4c4f69;
+    THEME_TEXT_0: #6c6f85;
+    THEME_TEXT_1: #5c5f77;
+    THEME_TEXT_2: #7c7f93;
+    THEME_OVERLAY_0: #9ca0b0;
+    THEME_OVERLAY_1: #8c8fa1;
+    THEME_OVERLAY_2: #7c7f93;
+    THEME_SURFACE_0: #ccd0da;
+    THEME_SURFACE_1: #bcc0cc;
+    THEME_SURFACE_2: #acb0be;
+    THEME_BASE: #eff1f5;
+    THEME_MANTLE: #e6e9ef;
+    THEME_CRUST: #dce0e8;
+}
+
+.dark-theme {
+    THEME_ROSE_WATER: #f5e0dc;
+    THEME_FLAMINGO: #f2cdcd;
+    THEME_PINK: #f5c2e7;
+    THEME_MAUVE: #cba6f7;
+    THEME_RED: #f38ba8;
+    THEME_MAROON: #eba0ac;
+    THEME_PEACH: #fab387;
+    THEME_YELLOW: #f9e2af;
+    THEME_GREEN: #a6e3a1;
+    THEME_TEAL: #94e2d5;
+    THEME_SKY: #89dceb;
+    THEME_SAPPHIRE: #74c7ec;
+    THEME_BLUE: #89b4fa;
+    THEME_LAVENDER: #b4befe;
+    THEME_TEXT: white;
+    THEME_TEXT_MAIN: #cdd6f4;
+    THEME_TEXT_0: #a6adc8;
+    THEME_TEXT_1: #bac2de;
+    THEME_TEXT_2: #9399b2;
+    THEME_OVERLAY_0: #6c7086;
+    THEME_OVERLAY_1: #7f849c;
+    THEME_OVERLAY_2: #9399b2;
+    THEME_SURFACE_0: #313244;
+    THEME_SURFACE_1: #45475a;
+    THEME_SURFACE_2: #585b70;
+    THEME_BASE: #1e1e2e;
+    THEME_MANTLE: #181825;
+    THEME_CRUST: #11111b;
+}
+
