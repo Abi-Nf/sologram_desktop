@@ -46,6 +46,10 @@ public class DefaultSettings {
     return loadAppPath("session.json");
   }
 
+  public static String getImageFolder(){
+    return loadAppPath("images");
+  }
+
   public static void resetFactory(){
     try {
       var folder = new File(getAppFolder());
