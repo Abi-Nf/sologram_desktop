@@ -25,7 +25,7 @@ public class Utils {
   }
 
   public static void asyncUiThread(Runnable runnable){
-    executeInNewThread(() -> runLater(runnable));
+    runLater(runnable);
   }
 
   public static boolean pathExists(String path){
