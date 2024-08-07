@@ -63,7 +63,11 @@ public class FileTagReader {
 
       var image = v2.getAlbumImage();
       if(image != null && image.length > 0){
-        var fileName = (artist + "_" + v2.getAlbum()).replaceAll("\\W", "_");
+        var fileName = (artist + "_" + v2.getAlbum())
+          .replaceAll("=", "equal")
+          .replaceAll("\\+", "plus")
+          .replaceAll("\\*", "times")
+          .replaceAll("\\W", "_");
         var imagePath = new File(imageFolder, fileName);
         albumBuilder.art(imagePath.getAbsolutePath());
         saveFile(imagePath, image);
