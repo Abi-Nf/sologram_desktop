@@ -38,12 +38,14 @@ public class HibernateConfig {
   }
 
   public static void init() {
-    var configuration = new Configuration();
-    configuration.setProperty("hibernate.connection.url", getDbUrl());
-    configuration.setProperty("hibernate.connection.driver_class", "org.sqlite.JDBC");
-    configuration.setProperty("hibernate.dialect", "org.hibernate.community.dialect.SQLiteDialect");
-    loadEntityClasses(configuration);
-    SESSION = configuration.buildSessionFactory();
+    if(SESSION == null){
+      var configuration = new Configuration();
+      configuration.setProperty("hibernate.connection.url", getDbUrl());
+      configuration.setProperty("hibernate.connection.driver_class", "org.sqlite.JDBC");
+      configuration.setProperty("hibernate.dialect", "org.hibernate.community.dialect.SQLiteDialect");
+      loadEntityClasses(configuration);
+      SESSION = configuration.buildSessionFactory();
+    }
   }
 
   private static void loadEntityClasses(Configuration conf){
