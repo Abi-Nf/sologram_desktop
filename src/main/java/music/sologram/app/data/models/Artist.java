@@ -1,12 +1,7 @@
 package music.sologram.app.data.models;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.nio.file.Path;
 import java.time.Instant;
@@ -42,7 +37,7 @@ public class Artist {
   }
 
   @PostPersist
-  private void onCreate(){
+  private void onCreate() {
     this.addedAt = Instant.now().toString();
   }
 }

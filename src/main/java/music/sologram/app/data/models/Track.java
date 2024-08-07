@@ -2,12 +2,7 @@ package music.sologram.app.data.models;
 
 import jakarta.persistence.*;
 import javafx.util.Duration;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import music.sologram.app.data.utils.DurationFormater;
 import music.sologram.app.data.utils.TrackRange;
 
@@ -51,7 +46,7 @@ public class Track {
     return Instant.parse(addedAt);
   }
 
-  public String getStyledDuration(){
+  public String getStyledDuration() {
     return DurationFormater.format(Duration.millis(duration));
   }
 
@@ -64,7 +59,7 @@ public class Track {
   }
 
   @PostPersist
-  private void onCreate(){
+  private void onCreate() {
     this.addedAt = Instant.now().toString();
   }
 }

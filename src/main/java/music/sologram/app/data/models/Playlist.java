@@ -33,22 +33,22 @@ public class Playlist {
   @Column(name = "created_at")
   private String createdAt;
 
-  public Instant getCreatedAt() {
-    return Instant.parse(createdAt);
-  }
-
-  public Playlist(String name){
+  public Playlist(String name) {
     this.name = name;
   }
 
-  public Playlist(String name, Path image){
+  public Playlist(String name, Path image) {
     this(name);
     this.image = image.toAbsolutePath().toString();
   }
 
-  public Playlist(String name, String description, Path image){
+  public Playlist(String name, String description, Path image) {
     this(name, image);
     this.description = description;
+  }
+
+  public Instant getCreatedAt() {
+    return Instant.parse(createdAt);
   }
 
   public Path getImage() {
@@ -56,7 +56,7 @@ public class Playlist {
   }
 
   @PostPersist
-  private void onCreate(){
+  private void onCreate() {
     this.createdAt = Instant.now().toString();
   }
 }

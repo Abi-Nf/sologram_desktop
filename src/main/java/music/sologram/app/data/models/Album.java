@@ -1,12 +1,7 @@
 package music.sologram.app.data.models;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.nio.file.Path;
 import java.time.Instant;
@@ -57,12 +52,12 @@ public class Album {
     return Instant.parse(addedAt);
   }
 
-  public String getRawArt(){
+  public String getRawArt() {
     return art;
   }
 
-  public Long getArtistId(){
-    if(artist == null) return null;
+  public Long getArtistId() {
+    if (artist == null) return null;
     return artist.getId();
   }
 
@@ -71,7 +66,7 @@ public class Album {
   }
 
   @PostPersist
-  private void onCreate(){
+  private void onCreate() {
     this.addedAt = Instant.now().toString();
   }
 }

@@ -23,16 +23,16 @@ public class Folder {
 
   private String folder;
 
-  public Folder(long id, String folder){
+  public Folder(long id, String folder) {
     this(folder);
     this.id = id;
   }
 
-  public Path toPath(){
-    return Path.of(folder);
+  public Folder(String folder) {
+    this.folder = folder;
   }
 
-  public Folder(String folder){
-    this.folder = folder;
+  public Path toPath() {
+    return Path.of(folder);
   }
 }

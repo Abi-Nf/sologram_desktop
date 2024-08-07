@@ -25,16 +25,16 @@ public class PlayTrackHistory {
   @Column(name = "played_at")
   private String playedAt;
 
+  public PlayTrackHistory(Track track) {
+    this.track = track;
+  }
+
   public Instant getPlayedAt() {
     return Instant.parse(playedAt);
   }
 
-  public PlayTrackHistory(Track track){
-    this.track = track;
-  }
-
   @PostPersist
-  private void onCreate(){
+  private void onCreate() {
     this.playedAt = Instant.now().toString();
   }
 }

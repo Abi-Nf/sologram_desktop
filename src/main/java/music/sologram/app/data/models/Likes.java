@@ -24,16 +24,16 @@ public class Likes {
   @Column(name = "liked_at")
   private String likedAt;
 
+  public Likes(Track track) {
+    this.track = track;
+  }
+
   public Instant getLikedAt() {
     return Instant.parse(likedAt);
   }
 
-  public Likes(Track track){
-    this.track = track;
-  }
-
   @PostPersist
-  private void onCreate(){
+  private void onCreate() {
     this.likedAt = Instant.now().toString();
   }
 }

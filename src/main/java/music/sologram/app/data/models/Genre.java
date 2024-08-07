@@ -30,12 +30,12 @@ public class Genre {
     return Instant.parse(addedAt);
   }
 
-  public Path getImage(){
+  public Path getImage() {
     return image != null ? Path.of(image) : null;
   }
 
   @PostPersist
-  private void onCreate(){
+  private void onCreate() {
     this.addedAt = Instant.now().toString();
   }
 }
