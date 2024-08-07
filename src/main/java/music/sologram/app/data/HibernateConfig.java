@@ -24,13 +24,15 @@ public class HibernateConfig {
     try {
       var sql = readString(Path.of(
         loadResource("/data/migrations.sql").getFile()
-      ));
+      )).split(";");
       var connection = getConnection(getDbUrl());
       connection.setAutoCommit(false);
-      var statement = connection.createStatement();
-      statement.execute(sql);
+      for (String tableSql : sql){
+        if(tableSql.trim().isEmpty()) continue;
+        var statement = connection.createStatement();
+        statement.execute(tableSql.trim());
+      }
       connection.commit();
-      connection.setAutoCommit(true);
       connection.close();
     } catch (Exception e) {
       throw new AppException(e);
