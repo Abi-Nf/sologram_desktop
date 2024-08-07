@@ -17,6 +17,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import javafx.stage.StageStyle;
+import music.sologram.app.data.HibernateConfig;
 import music.sologram.app.settings.DefaultSettings;
 import org.kordamp.ikonli.javafx.FontIcon;
 import org.kordamp.ikonli.materialdesign2.MaterialDesignF;
@@ -35,7 +36,10 @@ public class InstallationWindow extends Stage {
   private final BooleanProperty loading = new SimpleBooleanProperty(false);
 
   public InstallationWindow(Runnable afterInstallation) {
-    executeInNewThread(DefaultSettings::resetFactory);
+    executeInNewThread(() -> {
+      DefaultSettings.resetFactory();
+      HibernateConfig.init();
+    });
     this.afterInstallation = afterInstallation;
     setWidth(500);
     setHeight(400);
@@ -108,12 +112,14 @@ public class InstallationWindow extends Stage {
   }
 
   private void scanUserFolder(File folder) {
-    asyncUiThread(() -> {
-      loading.set(true);
+    loading.set(true);
+    executeInNewThread(() -> {
       scanFolder(folder);
-      loading.set(false);
-      afterInstallation.run();
-      close();
+      asyncUiThread(() -> {
+        loading.set(false);
+        afterInstallation.run();
+        close();
+      });
     });
   }
 }
